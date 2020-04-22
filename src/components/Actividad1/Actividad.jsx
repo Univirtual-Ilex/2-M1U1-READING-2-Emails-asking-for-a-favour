@@ -59,12 +59,13 @@ const Actividad_base =  ({staticContext, ...props}) => {
         var area = document.getElementById('area')
         var element = document.getElementById(element_id)
         var coord = element.getBoundingClientRect()
-        coord.ay = area.scrollTop
+		coord.ay = area.scrollTop
+		coord.ax = window.innerWidth
 		setBegin(coord)
 		setQuestionId(id)
 		if(document.getElementById('line_' + Data[id].id)){
 			$('#line_' + Data[id].id).remove()
-			Data[id].rigth = 0
+			Data[id].right = 0
 		}
 	}
 
@@ -84,12 +85,12 @@ const Actividad_base =  ({staticContext, ...props}) => {
 
 			var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
 			newLine.setAttribute('id',`${'line_' + question.id}`);
-			newLine.setAttribute('x1',`${begin.x}`);
+			newLine.setAttribute('x1',`${ 615}`);
 			newLine.setAttribute('y1',`${begin.ay + begin.y - 8}`);
-			newLine.setAttribute('x2',`${position_end.x}`);
+			newLine.setAttribute('x2',`${ 675 }`);
 			newLine.setAttribute('y2',`${position_end.y + begin.ay - 8}`);
 			newLine.setAttribute("stroke", `${Ilex.violeta}`)
-			var newElement = `<line x1=${begin.x} y1=${begin.y} x2=${position_end.x} y2=${position_end.y} stroke="black" />`
+			var newElement = `<line x1=${ begin.x} y1=${begin.y} x2=${position_end.x} y2=${position_end.y} stroke="black" />`
 			$("#svg").append(newLine);
 			
 			setBegin(false)
@@ -131,7 +132,7 @@ const Actividad_base =  ({staticContext, ...props}) => {
             <div> 
 	            <UiButtonsContainer>
 	                <ButtonUi icon='ilx-ayuda' tooltip='Click on the audio to hear the description, then answer' />
-	                <ButtonUi icon='ilx-volver' tooltip='Start Again' />
+	                <ButtonUi icon='ilx-volver' tooltip='Start Again'  onClick={ () => {window.location.reload()} } />
 	            </UiButtonsContainer>
 	            <IRow pt={1.5} className="text-center">
 	                <ICol py={ 0.5 }>
@@ -154,7 +155,7 @@ const Actividad_base =  ({staticContext, ...props}) => {
             <IRow pt={5}>
                 <ICol pt={1}><ButtonDown onClick={checkActivity} text={'CHECK'} /></ICol>
             </IRow>
-        <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad1'} finished={ok} />
+        <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'#/actividad1'} finished={ok} />
         </Container>
     )
 

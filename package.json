@@ -2,6 +2,7 @@
   "name": "m0u1-listening-1-welcome-to-your-program",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cdn-univirtual.utp.edu.co/ilex/interactions/21-2M1U1R2/",
   "dependencies": {
     "@mdi/js": "^4.8.95",
     "@mdi/react": "^1.2.1",
@@ -19,7 +20,7 @@
     "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "^3.4.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {
