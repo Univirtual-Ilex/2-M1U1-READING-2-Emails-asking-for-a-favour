@@ -53,7 +53,7 @@ const data = [
       "text": `
       <span>Hello Sandra,</span>
       <p>I am Francisco, the tall guy with long hair and mustache who sits next to the door in class.</p>
-      <p>Can you please give me your sister’s name and What’s Up number? I really like her, and I want to speak with her.</p>
+      <p>Can you please give me your sister’s name and WhatsApp number? I really like her, and I want to speak with her.</p>
       <p>Thanks,</p>
       <p>Francisco</p>`,
       "answer": 2

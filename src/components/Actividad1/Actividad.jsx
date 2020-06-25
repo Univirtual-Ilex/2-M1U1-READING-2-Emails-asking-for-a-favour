@@ -131,7 +131,7 @@ const Actividad_base =  ({staticContext, ...props}) => {
          </svg>
             <div> 
 	            <UiButtonsContainer>
-	                <ButtonUi icon='ilx-ayuda' tooltip='Click on the audio to hear the description, then answer' />
+	                <ButtonUi icon='ilx-ayuda' tooltip='Match the e-mails with the corresponding reply.' />
 	                <ButtonUi icon='ilx-volver' tooltip='Start Again'  onClick={ () => {window.location.reload()} } />
 	            </UiButtonsContainer>
 	            <IRow pt={1.5} className="text-center">
