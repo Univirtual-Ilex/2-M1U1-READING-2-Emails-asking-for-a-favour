@@ -49,7 +49,7 @@ const Container = styled(Container_base)`
         background-size: cover;
     }
 
-    @media screen and (max-height: 1080px) {
+    @media screen and (max-height: 3980px) {
         align-items:start;
         position:relative;
         padding-top: 6em;
